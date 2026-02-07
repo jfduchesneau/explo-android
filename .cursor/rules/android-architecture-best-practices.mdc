@@ -1,0 +1,20 @@
+---
+alwaysApply: true
+---
+
+---
+alwaysApply: true
+---
+
+# Android Architecture & Best Practices
+
+* **Language**: Use Kotlin programming language.
+* **UI Layer**: Use **Jetpack Compose** for all UI. Ensure State is hoisted and ViewModels expose a single `uiState` using `StateFlow`.
+* **Architecture**: Follow **Unidirectional Data Flow (UDF)**. UI sends events to ViewModel; ViewModel updates state.
+* **Data Layer**: Always use the **Repository Pattern**. Repositories are the Single Source of Truth (SSOT) and must be main-safe (handling `Dispatchers.IO` internally).
+* **Concurrency**: Use **Kotlin Coroutines and Flow**. Avoid using `Thread` or `Handler` directly. Use `viewModelScope` for UI-related tasks.
+* **Dependency Injection**: Use **Hilt** for DI. Prefer constructor injection over field injection.
+* **Lifecycle**: Never pass `Context`, `Activity`, or `View` references into ViewModels or Repositories to avoid memory leaks.
+* **Model Mapping**: Use separate models for Network (DTOs), Domain, and UI. Map between them at layer boundaries.
+* **Testing**: Prioritize **Unit Tests** for ViewModels and Repositories. Use `Turbine` for testing Flows and `fake` implementations over heavy mocking where possible.
+* **Formatting**: Follow the official **Kotlin Style Guide**. Use 4-space indentation and trailing commas for Compose parameters.

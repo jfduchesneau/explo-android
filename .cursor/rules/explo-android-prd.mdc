@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+# Product Requirements Document for this project (explo-android)
+
+- Objective: provide an Android app to be used for proof of concepts (POC) and engineering tests
+- User personas: software developers
+- Requirements/Features: to be defined
+- UX/UI: simple menus and buttons to run various POC and tests.

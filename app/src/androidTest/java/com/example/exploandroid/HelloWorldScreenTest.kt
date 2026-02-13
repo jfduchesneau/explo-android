@@ -17,18 +17,21 @@ class HelloWorldScreenTest {
 
     @Test
     fun actionButton_click_displaysHelloWorld() {
+        // POC tab is selected by default, HelloWorld is in POC section
         composeTestRule.onNodeWithText("Action").performClick()
         composeTestRule.onNodeWithText("Hello World").assertIsDisplayed()
     }
 
     @Test
     fun redButton_click_displaysRed() {
+        // POC tab is selected by default, HelloWorld is in POC section
         composeTestRule.onNodeWithText("Red").performClick()
         composeTestRule.onNodeWithText("Red!").assertIsDisplayed()
     }
 
     @Test
     fun greenButton_click_displaysGreen() {
+        // POC tab is selected by default, HelloWorld is in POC section
         composeTestRule.onNodeWithText("Green").performClick()
         composeTestRule.onNodeWithText("Green!").assertIsDisplayed()
     }

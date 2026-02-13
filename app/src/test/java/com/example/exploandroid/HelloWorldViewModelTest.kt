@@ -47,4 +47,11 @@ class HelloWorldViewModelTest {
         viewModel.onEvent(HelloWorldEvent.OnRedButtonClick)
         assertEquals("Red!", viewModel.uiState.value.message)
     }
+
+    @Test
+    fun onGreenButtonClick_setsMessageToGreen() = runTest {
+        val viewModel = HelloWorldViewModel()
+        viewModel.onEvent(HelloWorldEvent.OnGreenButtonClick)
+        assertEquals("Green!", viewModel.uiState.value.message)
+    }
 }

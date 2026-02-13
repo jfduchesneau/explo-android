@@ -12,3 +12,4 @@ val Pink40 = Color(0xFF7D5260)
 
 val ActionBlue = Color(0xFF2196F3)
 val ActionRed = Color(0xFFF44336)
+val ActionGreen = Color(0xFF4CAF50)

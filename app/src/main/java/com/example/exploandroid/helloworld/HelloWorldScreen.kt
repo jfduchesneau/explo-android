@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.exploandroid.ui.theme.ActionBlue
+import com.example.exploandroid.ui.theme.ActionGreen
 import com.example.exploandroid.ui.theme.ActionRed
 import com.example.exploandroid.ui.theme.ExploAndroidTheme
 
@@ -41,6 +42,13 @@ fun HelloWorldScreen(
             modifier = Modifier.padding(top = 8.dp),
         ) {
             Text("Red")
+        }
+        Button(
+            onClick = { onEvent(HelloWorldEvent.OnGreenButtonClick) },
+            colors = ButtonDefaults.buttonColors(containerColor = ActionGreen),
+            modifier = Modifier.padding(top = 8.dp),
+        ) {
+            Text("Green")
         }
         uiState.message?.let { message ->
             Text(

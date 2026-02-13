@@ -19,6 +19,9 @@ class HelloWorldViewModel : ViewModel() {
             is HelloWorldEvent.OnRedButtonClick -> {
                 _uiState.update { it.copy(message = "Red!") }
             }
+            is HelloWorldEvent.OnGreenButtonClick -> {
+                _uiState.update { it.copy(message = "Green!") }
+            }
         }
     }
 }

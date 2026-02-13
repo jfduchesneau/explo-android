@@ -28,3 +28,6 @@ Comprehensive checklist for conducting thorough code reviews to ensure quality, 
 - [ ] Input validation is present
 - [ ] Sensitive data is handled properly
 - [ ] No hardcoded secrets
+
+### Testing
+- [ ] Ensure unit tests have been added to keep a good test coverage on the project

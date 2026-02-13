@@ -5,7 +5,7 @@ description: Create a well-structured pull request
 
 Create a pull request for the current changes.
 
-- If current git branch is "main" or "develop", create a new feature branch so that changes are committed in the feature branch
+- If current git branch is "main" or "develop", create a new feature branch with prefix "feature/" so that changes are committed in the feature branch
 - Look at the staged and unstaged changes.
 - Write a clear commit message based on what changed
 - Commit and push to the current branch

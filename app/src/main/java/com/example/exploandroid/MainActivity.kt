@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.exploandroid.helloworld.HelloWorldScreen
+import com.example.exploandroid.helloworld.HelloWorldViewModel
 import com.example.exploandroid.ui.theme.ExploAndroidTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +21,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ExploAndroidTheme {
-                val viewModel: com.example.exploandroid.helloworld.HelloWorldViewModel = viewModel()
+                val viewModel: HelloWorldViewModel = viewModel()
                 val uiState by viewModel.uiState.collectAsStateWithLifecycle()
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     HelloWorldScreen(

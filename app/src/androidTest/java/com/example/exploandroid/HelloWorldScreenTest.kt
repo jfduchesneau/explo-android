@@ -20,4 +20,10 @@ class HelloWorldScreenTest {
         composeTestRule.onNodeWithText("Action").performClick()
         composeTestRule.onNodeWithText("Hello World").assertIsDisplayed()
     }
+
+    @Test
+    fun redButton_click_displaysRed() {
+        composeTestRule.onNodeWithText("Red").performClick()
+        composeTestRule.onNodeWithText("Red!").assertIsDisplayed()
+    }
 }
